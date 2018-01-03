@@ -100,7 +100,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/08/10/9.CSS初学者教程_2017.08.10/index.html">
 <meta property="og:site_name" content="摄影少年的猫窝">
 <meta property="og:description" content="前言​    按照惯例，先放原文链接CSS Beginner Tutorial. ​    HTML初学者教程一样，CSS初学者教程假设你什么也不懂(鬼知道英文原文是什么意思)，这个指南是为了教会零基础的人入门。 ​    CSS Intermediate Tutorial和 CSS Advanced Tutorial有更加深入的教学。 ​    CSS，也叫做层叠样式表(Cascading St">
-<meta property="og:updated_time" content="2017-12-26T03:32:50.527Z">
+<meta property="og:updated_time" content="2017-12-27T09:31:26.015Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS初学者教程">
 <meta name="twitter:description" content="前言​    按照惯例，先放原文链接CSS Beginner Tutorial. ​    HTML初学者教程一样，CSS初学者教程假设你什么也不懂(鬼知道英文原文是什么意思)，这个指南是为了教会零基础的人入门。 ​    CSS Intermediate Tutorial和 CSS Advanced Tutorial有更加深入的教学。 ​    CSS，也叫做层叠样式表(Cascading St">
@@ -413,7 +413,23 @@
 <h3 id="应用成功"><a href="#应用成功" class="headerlink" title="应用成功"></a>应用成功</h3><p>​    从本指南可以获得等多信息，如果我们自己敲代码将会是个好主意，来用你的文本编辑器打开新的文件保存空白文件，命名为“style.css”，放在和HTML文件同目录下。</p>
 <p>​    现在把你的HTML文件改成如下代码：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>My first web page<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"style.css"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>​    保存HTML文件。现在它连接了CSS文件，目前CSS文件还是空白的，所以不会改变任何事情。随着你在CSS初学者教程里不断前进，</p>
+<p>​    保存HTML文件。现在它连接了CSS文件，目前CSS文件还是空白的，所以不会改变任何事情。随着你在CSS初学者教程里不断前进，你将可以改变和添加CSS文件，通过刷新具有HTML结构网页的浏览器就可以看见变化了，就像我们之前做的那样。</p>
+<h2 id="选择器-selectors-，性质-Properties-，值-value"><a href="#选择器-selectors-，性质-Properties-，值-value" class="headerlink" title="选择器(selectors)，性质(Properties)，值(value)"></a>选择器(selectors)，性质(Properties)，值(value)</h2><p>HTML具有标签(tags)，CSS具有选择器。选择器是内部样式表和外部样式表的名称。在这个CSS初学者教程我们将会把重点放在HTML选择器上，这是HTML标签的简称并用于改变元素特殊类型的样式。</p>
+<p>每一个选择器在大括号{}里包含诸如color,font-weight,background-color等属性。</p>
+<p>通常一个value跟在冒号：后面（不是等号=），分号；用于分割属性。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">body</span> &#123;</div><div class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</div><div class="line">    <span class="attribute">color</span>: navy;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这将会把所给的值赋予给body选择器里面的font-size和color属性。</p>
+<p>总的来说，当把这应用在HTML文档上，在body标签之间的内容（整个窗口的内容）的字体大小变成14像素，颜色是海军蓝。</p>
+<h3 id="长度和百分数"><a href="#长度和百分数" class="headerlink" title="长度和百分数"></a>长度和百分数</h3><p>在CSS里面有许多特定属性的单位，但也有许多通用单位用于很多的属性，在继续学习之前值得你花时间去熟悉它们。</p>
+<ul>
+<li><strong>px</strong>(例如<strong>font-size: 12px</strong>)是用像素做单位</li>
+<li><strong>em</strong>(例如<strong>font-size: 2em</strong>)是根据现在字体计算的单位。比如，<strong>2em</strong>就是当前字号的2倍大。</li>
+<li><strong>pt</strong>(例如<strong>font-size: 12pt</strong>)是点的单位，特别是用于输出媒体的大小。</li>
+<li>%(例如<strong>width: 80%</strong>)是用于表示各种大小或者程度单位。</li>
+</ul>
+<p>其他单位包括<strong>pc</strong>，<strong>cm</strong>，<strong>mm</strong>，<strong>in</strong>。</p>
+<p>当一个value等于<strong>0</strong>，你不需要声明单位。例如，如果你想指定无边框，那就是<strong>border: 0</strong>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">在这个例子里面的“px”,它的意思并不需总是像素(电脑显示的最小单位)。现代李兰器允许</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -601,7 +617,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#目录"><span class="nav-number">2.</span> <span class="nav-text">目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#应用CSS-Applying-CSS"><span class="nav-number">3.</span> <span class="nav-text">应用CSS(Applying CSS)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Inline"><span class="nav-number">3.1.</span> <span class="nav-text">Inline</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Internal"><span class="nav-number">4.</span> <span class="nav-text">Internal</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#External"><span class="nav-number">4.1.</span> <span class="nav-text">External</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#应用成功"><span class="nav-number">4.2.</span> <span class="nav-text">应用成功</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#目录"><span class="nav-number">2.</span> <span class="nav-text">目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#应用CSS-Applying-CSS"><span class="nav-number">3.</span> <span class="nav-text">应用CSS(Applying CSS)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Inline"><span class="nav-number">3.1.</span> <span class="nav-text">Inline</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Internal"><span class="nav-number">4.</span> <span class="nav-text">Internal</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#External"><span class="nav-number">4.1.</span> <span class="nav-text">External</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#应用成功"><span class="nav-number">4.2.</span> <span class="nav-text">应用成功</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#选择器-selectors-，性质-Properties-，值-value"><span class="nav-number">5.</span> <span class="nav-text">选择器(selectors)，性质(Properties)，值(value)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#长度和百分数"><span class="nav-number">5.1.</span> <span class="nav-text">长度和百分数</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -624,7 +640,7 @@
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2017</span>
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
